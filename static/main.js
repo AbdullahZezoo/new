@@ -84,7 +84,7 @@ class LoginComponent {
                 'submissionID': this.submissionID.value
             };
             this.http.post('https://tawasolmasr.com/viewUser', uploadData, {
-                headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+                headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
             }).subscribe((data) => {
                 console.log(data);
                 this.router.navigateByUrl('/auth/saved-data', { state: data });
@@ -4001,14 +4001,14 @@ class ViewDataComponent {
             uploadData.append('submissionID', this.applicant.submissionID);
             console.log(this.applicant.nationalImg.name);
             this.http.post('https://tawasolmasr.com/api/Applicants/', uploadData, {
-                headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+                headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
             }).subscribe((data) => {
                 let auth = {
                     nationalID: data['id'],
                     submissionID: data['submissionID']
                 };
                 this.http.post('https://tawasolmasr.com/api/auth/', auth, {
-                    headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+                    headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
                 }).subscribe((data) => {
                     this.router.navigateByUrl('/auth/user-code', { state: auth });
                 });
@@ -4458,7 +4458,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // AoT requires an exported function for factories
 function HttpLoaderFactory(httpClient) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_4__["TranslateHttpLoader"](httpClient, './assets/i18n/', '.json');
+    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_4__["TranslateHttpLoader"](httpClient, './static/assets/i18n/', '.json');
 }
 class AppModule {
 }
@@ -4895,7 +4895,7 @@ class ViewApplicantComponent {
             const uploadData = new FormData();
             uploadData.append('status', this.applicant.status);
             this.http.put('https://tawasolmasr.com/api/Applicants/' + this.applicant.id + "/", uploadData, {
-                headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+                headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
             }).subscribe((data) => {
                 console.log(data);
                 this.router.navigateByUrl('/admin/main');
@@ -5328,7 +5328,7 @@ class AdminLoginComponent {
                 'password': this.password.value
             };
             this.http.get('https://tawasolmasr.com/api/admin/', {
-                headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+                headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
             }).subscribe((data) => {
                 console.log(data);
                 console.log(this.checkLogin(data));
@@ -6683,7 +6683,7 @@ class CardTableComponent {
     }
     ngOnInit() {
         this.http.get('https://tawasolmasr.com/api/Applicants/', {
-            headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+            headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
         }).subscribe((data) => {
             this.applicants = data;
         }, (err) => {
@@ -6693,7 +6693,7 @@ class CardTableComponent {
             this.error = this.translateConfigService.error("login");
         });
         this.http.get('https://tawasolmasr.com/api/auth/', {
-            headers: { 'Authorization': 'Token 98dbf975a3e1c5e3c2c879c772770b5fce52c3ff' }
+            headers: { 'Authorization': 'Token 5b4456dd4b6e50f0147a1a6f6ef49325e0605cd0' }
         }).subscribe((data) => {
             this.auth = data;
         }, (err) => {
