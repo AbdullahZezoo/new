@@ -4458,7 +4458,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // AoT requires an exported function for factories
 function HttpLoaderFactory(httpClient) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_4__["TranslateHttpLoader"](httpClient, './assets/i18n/', '.json');
+    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_4__["TranslateHttpLoader"](httpClient, '.static/assets/i18n/', '.json');
 }
 class AppModule {
 }
